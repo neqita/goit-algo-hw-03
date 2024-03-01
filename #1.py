@@ -11,7 +11,6 @@ def get_days_from_today(date):
 
         return difference
     except ValueError:
-        # Обробка винятку, якщо рядок дати має неправильний формат
         return "Неправильний формат дати. Використовуйте 'РРРР-ММ-ДД'."
 
 
