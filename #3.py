@@ -1,11 +1,10 @@
 import re
 
 def normalize_phone(phone_number):
-    cleaned_number = re.sub(r'[^0-9+]', '', phone_number)
+    cleaned_number = re.sub(r'\D', '', phone_number)
 
-    # Перевіряємо, чи номер починається з '+38' чи '380', інакше додаємо міжнародний код '+38'
     if not cleaned_number.startswith(('+38', '380')):
-        cleaned_number = '+38' + cleaned_number[1:]
+        cleaned_number = '+38' + cleaned_number
 
     return cleaned_number
 
